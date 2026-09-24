@@ -1,28 +1,31 @@
 # Task Manager
 
-A simple Task Management System built with Laravel.
+## Project Information
+
+**Project Code:** WST21-PM-2026-SF
+
+**Student Name:** DEHAYCO, CHRISTIAN WENDEL DEHAYCO
+
+**Course & Year:** BSIT 2
+
+**Database Used:** SQLite
 
 ## Features
 
-- Add Tasks
-- Edit Tasks
-- Delete Tasks
-- Set Task Status
-- Set Due Dates
-- Responsive UI
-- SQLite Database
-
-## Requirements
-
-- PHP 8+
-- Composer
-- Laravel 12
+- Add Task
+- View Tasks
+- Edit Task
+- Delete Task
+- Update Status
 
 ## Installation
 
 ```bash
 composer install
-cp .env.example .env
-php artisan key:generate
 php artisan migrate
 php artisan serve
+```
+
+## Project Description
+
+This Task Manager System is a Laravel-based web application that allows users to manage tasks efficiently. Users can create, view, edit, delete, and update the status of tasks. The system uses SQLite as its database and follows the MVC architecture provided by Laravel.
