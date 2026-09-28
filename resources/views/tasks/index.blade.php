@@ -12,7 +12,7 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1>📋 Personal Task Manager</h1>
 
-        <a href="{{ route('tasks.create') }}" class="btn btn-primary">
+        <a href="/tasks/create" class="btn btn-primary">
             + Add Task
         </a>
     </div>
@@ -54,7 +54,7 @@
                         <td>{{ $task->due_date }}</td>
 
                         <td>
-                            <a href="{{ route('tasks.edit', $task->id) }}"
+                            <a href="/tasks/{{ $task->id }}/edit"
                                class="btn btn-warning btn-sm">
                                 Edit
                             </a>

@@ -20,9 +20,19 @@ class TaskController extends Controller
 
     public function store(Request $request)
     {
-        Task::create($request->all());
+        $request->validate([
+            'task_name' => 'required',
+            'status' => 'required',
+        ]);
 
-        return redirect()->route('tasks.index');
+        Task::create([
+            'task_name' => $request->task_name,
+            'description' => $request->description,
+            'status' => $request->status,
+            'due_date' => $request->due_date,
+        ]);
+
+        return redirect('/tasks');
     }
 
     public function edit(Task $task)
@@ -32,15 +42,25 @@ class TaskController extends Controller
 
     public function update(Request $request, Task $task)
     {
-        $task->update($request->all());
+        $request->validate([
+            'task_name' => 'required',
+            'status' => 'required',
+        ]);
 
-        return redirect()->route('tasks.index');
+        $task->update([
+            'task_name' => $request->task_name,
+            'description' => $request->description,
+            'status' => $request->status,
+            'due_date' => $request->due_date,
+        ]);
+
+        return redirect('/tasks');
     }
 
     public function destroy(Task $task)
     {
         $task->delete();
 
-        return redirect()->route('tasks.index');
+        return redirect('/tasks');
     }
 }
