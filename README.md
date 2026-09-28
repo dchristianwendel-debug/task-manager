@@ -2,10 +2,10 @@
 
 ## Project Information
 
-- Project Code: WST21-PM-2026-SF
-- Student Name: DEHAYCO, CHRISTIAN WENDEL DEHAYCO
-- Course & Year: BSIT 2
-- Database Used: SQLite
+- **Project Code:** WST21-PM-2026-SF
+- **Student Name:** DEHAYCO, CHRISTIAN WENDEL DEHAYCO
+- **Course & Year:** BSIT 2
+- **Database Used:** SQLite
 
 ## Features
 
@@ -21,15 +21,15 @@
 
 ### Task List
 
-![Task List](screenshots/task-list.png)
+![Task List](app/screenshots/personal1.png)
 
 ### Add Task
 
-![Add Task](screenshots/add-task.png)
+![Add Task](app/screenshots/personal2.png)
 
 ### Saved Task
 
-![Saved Task](screenshots/saved-task.png)
+![Saved Task](app/screenshots/personal3.png)
 
 ---
 
@@ -39,3 +39,18 @@
 composer install
 php artisan migrate
 php artisan serve
+```
+
+Open your browser and visit:
+
+```text
+http://127.0.0.1:8000/tasks
+```
+
+## Technologies Used
+
+- Laravel 12
+- PHP
+- SQLite
+- Bootstrap 5
+- GitHub
